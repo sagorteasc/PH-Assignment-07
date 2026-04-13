@@ -1,7 +1,10 @@
+import Banner from "@/components/Banner/Banner";
+
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <Banner />
+      <hr className="text-[#E9E9E9] my-10 w-[70%] mx-auto" />
     </div>
   );
 };

@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`h-full`}
     >
-      <body className={`${geistSans.className} min-h-full flex flex-col`}>
+      <body className={`${geistSans.className} min-h-full flex flex-col bg-[#F8FAFC]`}>
         <Navbar />
         {children}
       </body>
