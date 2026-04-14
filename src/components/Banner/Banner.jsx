@@ -14,25 +14,25 @@ const Banner = () => {
 
             {/* Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 justify-items-center gap-4">
-                <div className="stats shadow w-full">
+                <div className="stats shadow w-full bg-white">
                     <div className="stat text-center grow">
                         <h2 className="font-semibold text-3xl text-[#244D3F]">10</h2>
                         <p className="text-lg text-[#64748B]">Total Friends</p>
                     </div>
                 </div>
-                <div className="stats shadow w-full">
+                <div className="stats shadow w-full bg-white">
                     <div className="stat text-center">
                         <h2 className="font-semibold text-3xl text-[#244D3F]">3</h2>
                         <p className="text-lg text-[#64748B]">On Track</p>
                     </div>
                 </div>
-                <div className="stats shadow w-full">
+                <div className="stats shadow w-full bg-white">
                     <div className="stat text-center">
                         <h2 className="font-semibold text-3xl text-[#244D3F]">6</h2>
                         <p className="text-lg text-[#64748B]">Need Attention</p>
                     </div>
                 </div>
-                <div className="stats shadow w-full">
+                <div className="stats shadow w-full bg-white">
                     <div className="stat text-center">
                         <h2 className="font-semibold text-3xl text-[#244D3F]">12</h2>
                         <p className="text-lg text-[#64748B]">Interactions This Month</p>

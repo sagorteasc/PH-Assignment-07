@@ -9,7 +9,7 @@
     "tags": ["college", "roommate"],
     "bio": "We studied computer science together and built our first startup idea in college.",
     "goal": 14,
-    "next_due_date": "2026-04-05"
+    "next_due_date": "Apr 5, 2026"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "tags": ["work", "design team"],
     "bio": "Worked together on multiple UI/UX projects and often share design resources.",
     "goal": 14,
-    "next_due_date": "2026-04-18"
+    "next_due_date": "Apr 18, 2026"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "tags": ["gym", "fitness buddy"],
     "bio": "We meet at the gym regularly and keep each other motivated to stay consistent.",
     "goal": 14,
-    "next_due_date": "2026-04-25"
+    "next_due_date": "Apr 25, 2026"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "tags": ["travel", "close friend"],
     "bio": "Traveled across Spain together and still share travel plans and memories.",
     "goal": 14,
-    "next_due_date": "2026-04-03"
+    "next_due_date": "Apr 3, 2026"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "tags": ["school", "football team"],
     "bio": "Played football together in school and still catch up during major matches.",
     "goal": 14,
-    "next_due_date": "2026-04-16"
+    "next_due_date": "Apr 16, 2026"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "tags": ["family friend"],
     "bio": "Family friends since childhood and meet during festivals and family events.",
     "goal": 14,
-    "next_due_date": "2026-04-22"
+    "next_due_date": "Apr 22, 2026"
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
     "tags": ["startup", "business"],
     "bio": "Co-founded a small online business and still discuss new ideas occasionally.",
     "goal": 14,
-    "next_due_date": "2026-04-07"
+    "next_due_date": "Apr 7, 2026"
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "tags": ["book club"],
     "bio": "We read and discuss books together every month and share recommendations.",
     "goal": 14,
-    "next_due_date": "2026-04-17"
+    "next_due_date": "Apr 17, 2026"
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@
     "tags": ["neighbor"],
     "bio": "Lives nearby and we often hang out in the evenings or grab tea together.",
     "goal": 14,
-    "next_due_date": "2026-04-26"
+    "next_due_date": "Apr 26, 2026"
   },
   {
     "id": 10,
@@ -117,6 +117,6 @@
     "tags": ["university"],
     "bio": "Worked on several university research projects and stayed in touch afterward.",
     "goal": 14,
-    "next_due_date": "2026-04-04"
+    "next_due_date": "Apr 4, 2026"
   }
 ]
