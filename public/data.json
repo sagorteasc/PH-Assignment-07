@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Michael Carter",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "michael.carter@gmail.com",
+    "days_since_contact": 18,
+    "status": "Overdue",
+    "tags": ["college", "roommate"],
+    "bio": "We studied computer science together and built our first startup idea in college.",
+    "goal": 14,
+    "next_due_date": "2026-04-05"
+  },
+  {
+    "id": 2,
+    "name": "Aisha Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/43.jpg",
+    "email": "aisha.rahman@gmail.com",
+    "days_since_contact": 10,
+    "status": "Almost Due",
+    "tags": ["work", "design team"],
+    "bio": "Worked together on multiple UI/UX projects and often share design resources.",
+    "goal": 14,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 3,
+    "name": "Daniel Kim",
+    "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+    "email": "daniel.kim@gmail.com",
+    "days_since_contact": 5,
+    "status": "On-Track",
+    "tags": ["gym", "fitness buddy"],
+    "bio": "We meet at the gym regularly and keep each other motivated to stay consistent.",
+    "goal": 14,
+    "next_due_date": "2026-04-25"
+  },
+  {
+    "id": 4,
+    "name": "Sofia Martinez",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "sofia.martinez@gmail.com",
+    "days_since_contact": 20,
+    "status": "Overdue",
+    "tags": ["travel", "close friend"],
+    "bio": "Traveled across Spain together and still share travel plans and memories.",
+    "goal": 14,
+    "next_due_date": "2026-04-03"
+  },
+  {
+    "id": 5,
+    "name": "James Anderson",
+    "picture": "https://randomuser.me/api/portraits/men/14.jpg",
+    "email": "james.anderson@gmail.com",
+    "days_since_contact": 13,
+    "status": "Almost Due",
+    "tags": ["school", "football team"],
+    "bio": "Played football together in school and still catch up during major matches.",
+    "goal": 14,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 6,
+    "name": "Nusrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/71.jpg",
+    "email": "nusrat.jahan@gmail.com",
+    "days_since_contact": 7,
+    "status": "On-Track",
+    "tags": ["family friend"],
+    "bio": "Family friends since childhood and meet during festivals and family events.",
+    "goal": 14,
+    "next_due_date": "2026-04-22"
+  },
+  {
+    "id": 7,
+    "name": "Ryan O'Connor",
+    "picture": "https://randomuser.me/api/portraits/men/45.jpg",
+    "email": "ryan.oconnor@gmail.com",
+    "days_since_contact": 16,
+    "status": "Overdue",
+    "tags": ["startup", "business"],
+    "bio": "Co-founded a small online business and still discuss new ideas occasionally.",
+    "goal": 14,
+    "next_due_date": "2026-04-07"
+  },
+  {
+    "id": 8,
+    "name": "Emily Watson",
+    "picture": "https://randomuser.me/api/portraits/women/59.jpg",
+    "email": "emily.watson@gmail.com",
+    "days_since_contact": 12,
+    "status": "Almost Due",
+    "tags": ["book club"],
+    "bio": "We read and discuss books together every month and share recommendations.",
+    "goal": 14,
+    "next_due_date": "2026-04-17"
+  },
+  {
+    "id": 9,
+    "name": "Arif Hasan",
+    "picture": "https://randomuser.me/api/portraits/men/29.jpg",
+    "email": "arif.hasan@gmail.com",
+    "days_since_contact": 3,
+    "status": "On-Track",
+    "tags": ["neighbor"],
+    "bio": "Lives nearby and we often hang out in the evenings or grab tea together.",
+    "goal": 14,
+    "next_due_date": "2026-04-26"
+  },
+  {
+    "id": 10,
+    "name": "Olivia Brown",
+    "picture": "https://randomuser.me/api/portraits/women/79.jpg",
+    "email": "olivia.brown@gmail.com",
+    "days_since_contact": 19,
+    "status": "Overdue",
+    "tags": ["university"],
+    "bio": "Worked on several university research projects and stayed in touch afterward.",
+    "goal": 14,
+    "next_due_date": "2026-04-04"
+  }
+]
