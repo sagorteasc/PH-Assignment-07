@@ -6,7 +6,7 @@ const Friend = ({ friend }) => {
 
     return (
         <div>
-            <div className="card bg-base-100 w-full shadow-sm hover:scale-105 transition-all hover:shadow-lg">
+            <div className="card bg-base-100 w-full md:h-80 shadow-sm hover:scale-105 transition-all hover:shadow-lg">
                 <figure className="px-10 pt-10">
                     <Image
                         className="rounded-full"
@@ -20,7 +20,7 @@ const Friend = ({ friend }) => {
                     <h2 className="font-semibold text-xl">{name}</h2>
                     <p className="text-[#64748B] text-xs">{days_since_contact}d ago</p>
                     <div className="flex flex-col gap-3 items-center">
-                        <div className="flex gap-1 flex-wrap">
+                        <div className="flex gap-1 justify-center items-center flex-wrap grow">
                             {
                                 tags.map((tag, idx) => <span
                                     className="badge bg-[#CBFADB] text-[#244D3F]"
@@ -29,8 +29,9 @@ const Friend = ({ friend }) => {
                                 </span>)
                             }
                         </div>
+
                         <div
-                            className={`badge font-medium text-xs text-white ${status === "Overdue" ?
+                            className={`badge font-medium text-xs text-white grow ${status === "Overdue" ?
                                 "bg-[#EF4444]"
                                 : status === "On-Track" ?
                                     "bg-[#244D3F]"

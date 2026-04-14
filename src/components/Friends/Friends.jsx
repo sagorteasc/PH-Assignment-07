@@ -1,15 +1,9 @@
 import Friend from "../Friend/Friend";
+import data from "../../../public/data.json"
 
-const fetchData = async () => {
+const Friends = () => {
 
-    const res = await fetch("http://localhost:3000/data.json");
-    const data = await res.json();
-    return data;
-}
-
-const Friends = async () => {
-
-    const friendsData = await fetchData()
+    const friendsData = data;
 
     return (
         <div className="w-11/12 md:w-3/4 mx-auto my-12 sm:my-16 lg:my-20">
