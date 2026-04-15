@@ -4,10 +4,16 @@ import data from "../../../public/data.json"
 import { Archive, Bell, Trash2 } from "lucide-react";
 import { use, useContext } from "react";
 import { DataContext } from "@/context/DataProvider";
+import { notFound } from "next/navigation";
 
 const FriendDetails = ({ params }) => {
     const { id } = use(params);
     const currentFriend = data.find(friend => friend.id === +id);
+
+    if (!currentFriend) {
+        notFound();
+    }
+
     const { name, picture, days_since_contact, status, tags, bio, email, goal, next_due_date } = currentFriend;
 
     const { handleList } = useContext(DataContext);
