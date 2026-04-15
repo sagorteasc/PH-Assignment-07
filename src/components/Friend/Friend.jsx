@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import PropTypes from "prop-types";
 
 const Friend = ({ friend }) => {
 
@@ -48,5 +49,9 @@ const Friend = ({ friend }) => {
         </div>
     );
 };
+
+Friend.propTypes = {
+    friend: PropTypes.object.isRequired
+}
 
 export default Friend;

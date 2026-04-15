@@ -6,7 +6,7 @@ import { BiDownArrow } from "react-icons/bi";
 
 const Timeline = () => {
 
-    const { list } = useContext(DataContext);
+    const { list, sort, sortList, handleSort } = useContext(DataContext);
 
     return (
         <div className="w-11/12 md:w-3/4 mx-auto my-12 sm:my-16 lg:my-20">
@@ -18,10 +18,21 @@ const Timeline = () => {
                         <h1 className="font-bold text-5xl mb-4">Timeline</h1>
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn m-1 text-lg text-[#64748B]">Filter timeline <BiDownArrow /></div>
+
                             <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 flex flex-col gap-3 w-52 p-4 shadow-sm">
-                                <li className="hover:bg-gray-300 transition-all cursor-pointer">Call</li>
-                                <li className="hover:bg-gray-300 transition-all cursor-pointer">Text</li>
-                                <li className="hover:bg-gray-300 transition-all cursor-pointer">Video</li>
+
+                                <li className="hover:bg-gray-300 transition-all cursor-pointer">
+                                    <button onClick={() => handleSort("call")}>Call</button>
+                                </li>
+
+                                <li className="hover:bg-gray-300 transition-all cursor-pointer">
+                                    <button onClick={() => handleSort("text")}>Text</button>
+                                </li>
+
+                                <li className="hover:bg-gray-300 transition-all cursor-pointer">
+                                    <button onClick={() => handleSort("video")}>Video</button>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -39,52 +50,102 @@ const Timeline = () => {
                                 height={500}
                             />
                         </div>
-                        : list.map((item, idx) => (
-                            <div key={idx} className="mb-3">
-                                <div className="card bg-base-100 shadow-sm hover:scale-105 hover:shadow-md transition-all">
-                                    <div className="flex items-center gap-4 ml-5">
-                                        <div>
-                                            {
-                                                item.type === "call" ?
-                                                    <Image
-                                                        src={"/assets/call.png"}
-                                                        alt="Call"
-                                                        width={30}
-                                                        height={30}
-                                                    />
-                                                    : item.type === "text" ?
+                        :
+                        sort ?
+                            sortList.map((item, idx) => (
+                                <div key={idx} className="mb-3">
+                                    <div className="card bg-base-100 shadow-sm hover:scale-105 hover:shadow-md transition-all">
+                                        <div className="flex items-center gap-4 ml-5">
+
+                                            <div>
+                                                {
+                                                    item.type === "call" ?
                                                         <Image
-                                                            src={"/assets/text.png"}
-                                                            alt="Text"
+                                                            src={"/assets/call.png"}
+                                                            alt="Call"
                                                             width={30}
                                                             height={30}
                                                         />
-                                                        :
-                                                        <Image
-                                                            src={"/assets/video.png"}
-                                                            alt="Video"
-                                                            width={30}
-                                                            height={30}
-                                                        />
-                                            }
-                                        </div>
+                                                        : item.type === "text" ?
+                                                            <Image
+                                                                src={"/assets/text.png"}
+                                                                alt="Text"
+                                                                width={30}
+                                                                height={30}
+                                                            />
+                                                            :
+                                                            <Image
+                                                                src={"/assets/video.png"}
+                                                                alt="Video"
+                                                                width={30}
+                                                                height={30}
+                                                            />
+                                                }
+                                            </div>
 
-                                        <div className="card-body">
-                                            <h2 className="text-[#64748B] text-lg">
-                                                <span
-                                                    className="font-medium text-xl text-[#244D3F]">
-                                                    {item.type.toUpperCase()} </span>
-                                                with {item.name}
-                                            </h2>
+                                            <div className="card-body">
+                                                <h2 className="text-[#64748B] text-lg">
+                                                    <span
+                                                        className="font-medium text-xl text-[#244D3F]">
+                                                        {item.type.toUpperCase()} </span>
+                                                    with {item.name}
+                                                </h2>
 
-                                            <p className="font-medium text-[#64748B]">
-                                                {new Date().toLocaleDateString()}
-                                            </p>
+                                                <p className="font-medium text-[#64748B]">
+                                                    {new Date().toLocaleDateString()}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))
+                            ))
+                            : list.map((item, idx) => (
+                                <div key={idx} className="mb-3">
+                                    <div className="card bg-base-100 shadow-sm hover:scale-105 hover:shadow-md transition-all">
+                                        <div className="flex items-center gap-4 ml-5">
+
+                                            <div>
+                                                {
+                                                    item.type === "call" ?
+                                                        <Image
+                                                            src={"/assets/call.png"}
+                                                            alt="Call"
+                                                            width={30}
+                                                            height={30}
+                                                        />
+                                                        : item.type === "text" ?
+                                                            <Image
+                                                                src={"/assets/text.png"}
+                                                                alt="Text"
+                                                                width={30}
+                                                                height={30}
+                                                            />
+                                                            :
+                                                            <Image
+                                                                src={"/assets/video.png"}
+                                                                alt="Video"
+                                                                width={30}
+                                                                height={30}
+                                                            />
+                                                }
+                                            </div>
+
+                                            <div className="card-body">
+                                                <h2 className="text-[#64748B] text-lg">
+                                                    <span
+                                                        className="font-medium text-xl text-[#244D3F]">
+                                                        {item.type.toUpperCase()} </span>
+                                                    with {item.name}
+                                                </h2>
+
+                                                <p className="font-medium text-[#64748B]">
+                                                    {new Date().toLocaleDateString()}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
                 }
             </div>
         </div>
