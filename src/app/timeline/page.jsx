@@ -1,9 +1,9 @@
-// import Timeline from "@/components/Stats/Stats";
+import Timeline from "@/components/Timeline/Timeline";
 
 const TimelineRoute = () => {
     return (
         <div>
-            <h1>Timeline</h1>
+            <Timeline />
         </div>
     );
 };

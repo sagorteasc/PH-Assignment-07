@@ -1,13 +1,16 @@
+"use client";
 import Image from "next/image";
 import data from "../../../public/data.json"
 import { Archive, Bell, Trash2 } from "lucide-react";
+import { use, useContext } from "react";
+import { DataContext } from "@/context/DataProvider";
 
-const FriendDetails = async ({ params }) => {
-
-    const { id } = await params;
+const FriendDetails = ({ params }) => {
+    const { id } = use(params);
     const currentFriend = data.find(friend => friend.id === +id);
-    const { name, picture, days_since_contact, status, tags, bio, email, goal, next_due_date } = currentFriend
+    const { name, picture, days_since_contact, status, tags, bio, email, goal, next_due_date } = currentFriend;
 
+    const { handleList } = useContext(DataContext);
 
     return (
         <div className="w-11/12 md:w-3/4 mx-auto my-12 sm:my-16 lg:my-20">
@@ -62,7 +65,7 @@ const FriendDetails = async ({ params }) => {
 
                         <button className="btn w-full font-medium bg-white shadow-sm hover:scale-105 transition-all hover:shadow-lg"><Archive /> Archive</button>
 
-                        <button className="btn w-full font-medium bg-white shadow-sm hover:scale-105 transition-all hover:shadow-lg"><Trash2 /> Snooze 2 weeks</button>
+                        <button className="btn w-full font-medium bg-white text-[#EF4444] shadow-sm hover:scale-105 transition-all hover:shadow-lg"><Trash2 /> Delete</button>
                     </div>
                 </div>
 
@@ -106,42 +109,51 @@ const FriendDetails = async ({ params }) => {
 
                             <div>
                                 <div className="grid grid-cols-2 lg:grid-cols-3 justify-items-center gap-4">
-                                    <div className="stats bg-[#F8FAFC] shadow w-full hover:scale-105 transition-all hover:shadow-md">
-                                        <div className="stat text-center grow">
-                                            <Image
-                                                className="mx-auto mb-1"
-                                                src={"/assets/call.png"}
-                                                alt="Call"
-                                                width={30}
-                                                height={30}
-                                            />
-                                            <p className="text-lg">Call</p>
+                                    <button className="w-full" onClick={() => handleList(id, "call")}>
+                                        <div className="stats bg-[#F8FAFC] shadow w-full hover:scale-105 transition-all hover:shadow-md">
+                                            <div className="stat text-center grow">
+                                                <Image
+                                                    className="mx-auto mb-1"
+                                                    src={"/assets/call.png"}
+                                                    alt="Call"
+                                                    width={30}
+                                                    height={30}
+                                                />
+                                                <p className="text-lg">Call</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="stats bg-[#F8FAFC] shadow w-full hover:scale-105 transition-all hover:shadow-md">
-                                        <div className="stat text-center">
-                                            <Image
-                                                className="mx-auto mb-1"
-                                                src={"/assets/text.png"}
-                                                alt="Text"
-                                                width={30}
-                                                height={30}
-                                            />
-                                            <p className="text-lg">Text</p>
+                                    </button>
+
+                                    <button className="w-full" onClick={() => handleList(id, "text")}>
+                                        <div className="stats bg-[#F8FAFC] shadow w-full hover:scale-105 transition-all hover:shadow-md">
+                                            <div className="stat text-center">
+                                                <Image
+                                                    className="mx-auto mb-1"
+                                                    src={"/assets/text.png"}
+                                                    alt="Text"
+                                                    width={30}
+                                                    height={30}
+                                                />
+                                                <p className="text-lg">Text</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="stats bg-[#F8FAFC] shadow w-full hover:scale-105 transition-all hover:shadow-md">
-                                        <div className="stat text-center">
-                                            <Image
-                                                className="mx-auto mb-1"
-                                                src={"/assets/video.png"}
-                                                alt="Video"
-                                                width={30}
-                                                height={30}
-                                            />
-                                            <p className="text-lg">Video</p>
+                                    </button>
+
+                                    <button className="w-full" onClick={() => handleList(id, "video")}>
+                                        <div className="stats bg-[#F8FAFC] shadow w-full hover:scale-105 transition-all hover:shadow-md">
+                                            <div className="stat text-center">
+                                                <Image
+                                                    className="mx-auto mb-1"
+                                                    src={"/assets/video.png"}
+                                                    alt="Video"
+                                                    width={30}
+                                                    height={30}
+                                                />
+                                                <p className="text-lg">Video</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </button>
+
                                 </div>
                             </div>
                         </div>
