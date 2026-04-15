@@ -77,14 +77,9 @@ const Timeline = () => {
                                                 with {item.name}
                                             </h2>
 
-                                            <div className="flex w-fit items-center gap-4">
-                                                <p className="font-medium text-[#64748B]">
-                                                    {new Date().toLocaleDateString()}
-                                                </p>
-                                                <p className="font-medium text-[#64748B]">
-                                                    {new Date().toLocaleTimeString()}
-                                                </p>
-                                            </div>
+                                            <p className="font-medium text-[#64748B]">
+                                                {new Date().toLocaleDateString()}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
