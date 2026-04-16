@@ -66,13 +66,14 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <Image
-                        className="md:hidden"
-                        src="/assets/logo.png"
-                        alt="Navbar Logo"
-                        width={200}
-                        height={200}
-                    />
+                    <div className="md:hidden">
+                        <Image
+                            src="/assets/logo.png"
+                            alt="Navbar Logo"
+                            width={200}
+                            height={200}
+                        />
+                    </div>
                 </div>
             </nav>
         </div>

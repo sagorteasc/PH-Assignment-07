@@ -1,9 +1,14 @@
 import Friend from "../Friend/Friend";
-import data from "../../../public/data.json"
 
-const Friends = () => {
+const fetchData = async () => {
+    const res = await fetch("https://sagorteasc-keen-keeper.vercel.app/data.json");
+    const data = await res.json()
+    return data;
+}
 
-    const friendsData = data;
+const Friends = async () => {
+
+    const friendsData = await fetchData();
 
     return (
         <div className="w-11/12 md:w-3/4 mx-auto my-12 sm:my-16 lg:my-20">
